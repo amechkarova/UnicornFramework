@@ -1,0 +1,9 @@
+{
+	"$Schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/refs/heads/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+	"settings": {
+		"documentationRules": {
+			"companyName": "Unicorn Ltd.",
+			"copyrightText": "\"Licensed under the Apache License, Version 2.0 (the \"License\");\""
+		}
+	}
+}

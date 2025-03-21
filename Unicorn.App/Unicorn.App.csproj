@@ -1,0 +1,6 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\sharedinfo.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Unicorn.Container\Unicorn.Container.csproj" />
+  </ItemGroup>
+</Project>

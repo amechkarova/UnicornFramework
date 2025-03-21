@@ -1,0 +1,81 @@
+!!! Name: Unicorn Test Automation Framework
+
+High-Level Requirements:
+- private closed sourced
+- to be able to test web, mobile, desktop, REST
+- integration - to be able to integrate with existing tooling - execute test in CI(Jenkins, Bitbucket, Azure DevOps, etc.)
+- cross platform(Windows, Linux, Mac) -> this shows that it is mandatory to use .Net Core and not .NetFramework
+- unified API - we should thrive to make the whole architecture, all of the methods and so on almost identical for the different technologies(web, desktop, mobile)
+- documentation + starter kit(learning guide), one project "GettingStarted" which shows everything in the framework how to be used and there are explanations written in comments
+- specFlow? - NO
+
+Framework Characteristics:
+- test reliability
+- easy to learn(learning curve)
+- test readability
+- the framework to be extensible
+- to be maintainable
+- troubleshooting easiness - screenshots, videos, logs
+- unified team convention rules - StyleCop? documentation policies?
+- advanced scenarios support - PDF verification, responsive/layout testing
+
+Short Research Phase:
+- search for existing open source frameworks that have the written characteristics - froglogic, testing-whiz.com, katalon.com, lambdatests.com(it is not even UI tool), microfocus.com, smartbear.com - testcomplete, Telerik test studio - they are more like UI tools
+
+Detailed Requirements:
+- WebDriver(for Java and C#), for JavaScript and Angular people use something different from WebDriver, for Desktop WinAppDriver, Appium
+- search for REST testing library?? RestSharp(it is free open source)
+- MSTest, NUnit or xUnit? - Bellatrix supports two of them => We are going to use NUnit!!!
+- the Observer plugins cannot be done with xUnit
+- Ghost doc -> /// <summary>
+- lets stick to AzureDevOps CI
+- Report portal? Allure? or AzureDevOps? for the reporting
+- Should we support Selenium grid?
+- no SpecFlow
+- StyleCop
+
+-----------------------------------------------------------------------------------------------
+Detailed Features Breakdown:
+- test reliability
+	* the reasons for test failure? the framework should be responsible for handling this automatically for us
+	* handle all synchronization issues
+	* smart wait assertions(ensure assertions in Bellatrix)
+- easy to learn(learning curve)
+	* similar API
+	* Getting started guide
+	* add summary on methods(GhostDoc)
+	* documentation
+- faster tests creation
+	* handy elements locators(wrapper methods for the base API)
+	* handy wait methods(wrapper methods for the base API)
+- test readability
+	* usage of Page Objects
+ 	* BDD logging
+	* app design pattern
+- the framework to be extensible
+	* Plugin architecture(Observer design pattern)
+	* delegates - hooks
+	* add new locators
+	* adding new waiters
+- to be maintainable
+	* abstracting the code so that we do not duplicate it(proper project structure to reuse everything, abstract it)
+	* support JSON configuration
+	* inversion of control container internally
+	* support facades?
+- troubleshooting easiness
+	* full-page/normal screenshot on failure
+	* videos on failure
+	* logging to console/file
+- unified team convention rules
+	* integrate StyleCop
+- advanced scenarios support
+	* support responsive/layout testing
+
+
+-----------------------------------------------------------------------------------------------
+Research:
+Open source frameworks:
+Selenide - https://selenide.org
+Objectivity Ltd: Ocaramba - https://github.com/Accenture/Ocaramba, https://github.com/ObjectivityLtd/Ocaramba
+Epam jdi framework - https://jdi.epam.com
+Atata framework - https://atata.io
